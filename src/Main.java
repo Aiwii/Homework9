@@ -14,13 +14,15 @@ public class Main {
         //Task 2
         System.out.println("Task 2:");
         int min = monthlyPayment[0];
-        int max = monthlyPayment[0];
+        int max = monthlyPayment[1];
 
-        for (int j : monthlyPayment) {
-            if (j > max) {
-                max = j;
+        for (int i = 0; i < monthlyPayment.length; i++) {
+            if (monthlyPayment[i] < min) {
+                min = monthlyPayment[i];
             }
-
+            if (monthlyPayment[i] > max){
+                max = monthlyPayment[i];
+            }
         }
         System.out.println("Минимальная сумма трат за неделю составила " + min + " рублей");
         System.out.println("Максимальная сумма трат за неделю составила " + max + " рублей");
